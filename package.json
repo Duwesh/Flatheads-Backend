@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Duwesh/Flatheads-Backend/issues"
   },
-  "homepage": "https://github.com/Duwesh/Flatheads-Backend#readme"
+  "homepage": "https://github.com/Duwesh/Flatheads-Backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
