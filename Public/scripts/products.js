@@ -72,7 +72,7 @@ var arr = [
     image1:
       "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/BlackOnBlack2_1800x1800.jpg",
     image2:
-      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/BlackOnBlack8_1800x1800.jpg?v=1631782732",
+      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/BlackOnBlack7_1800x1800.jpg?v=1644229423",
     title: "Drift Black On Black",
     original_price: "1440",
     final_price: "1299",
@@ -81,9 +81,9 @@ var arr = [
   {
     id: "8",
     image1:
-      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyonBlack2_1800x1800.jpg",
+      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyOnBlack1_1800x1800.jpg?v=1644229566",
     image2:
-      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyonBlack8_1800x1800.jpg?v=1631782809",
+      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyOnBlack8_1800x1800.jpg?v=1644229571",
     title: "Drift Grey On Black",
     original_price: "1440",
     final_price: "1299",
@@ -92,9 +92,9 @@ var arr = [
   {
     id: "9",
     image1:
-      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyonWhite3_1800x1800.jpg",
+      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyOnWhite2_1800x1800.jpg?v=1644229695",
     image2:
-      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyonWhite8_1800x1800.jpg?v=1631782852",
+      "https://cdn.shopify.com/s/files/1/0258/2485/4100/products/GreyOnWhite8_1800x1800.jpg?v=1644229695",
     title: "Drift Grey On White",
     original_price: "1440",
     final_price: "1299",
@@ -170,7 +170,19 @@ var arr = [
 
 let products1 = document.getElementById("products");
 
-// let data = arr.products;
+async function callProudcts() {
+  try {
+    let responce = await fetch("https://flatheads.herokuapp.com/products");
+
+    let products = await responce.json();
+    console.log(products);
+  } catch (error) {
+    return res.send(error);
+  }
+}
+
+callProudcts();
+let data = arr.products;
 
 displayProducts(arr);
 

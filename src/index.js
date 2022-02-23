@@ -6,6 +6,8 @@ const productsContrller = require("./controllers/product.controller");
 const Port1 = process.env.Port || 1234;
 const app = express();
 app.use(express.json());
+
+
 app.use("/products", productsContrller);
 
 
