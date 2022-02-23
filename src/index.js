@@ -2,6 +2,7 @@ const express = require("express");
 const  connect  = require("./configs/db.js");
 const userController = require("./controllers/user.controller");
 const Register = require("./controllers/auth.controller");
+const loginController = require("./controllers/login.controller")
 const app = express();
 const bodyParser = require("body-parser")
 
@@ -10,7 +11,7 @@ app.use(express.json());
 
 app.use("/users",userController)
 app.post("/register",Register);
-
+app.use("/login",loginController);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
