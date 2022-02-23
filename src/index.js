@@ -8,12 +8,15 @@ const app = express();
 app.use(express.json());
 app.use("/products", productsContrller);
 
+
+app.use(express.static("Public"));
+
 // app.set("views", "views");
-app.set("view engine", "ejs");
+app.set("view Engine", "ejs");
 
 
 app.get("", (req, res)=>{
-  return res.render("product")
+  return res.render("product.ejs")
 })
 
 app.listen(Port1, async (req, res) => {

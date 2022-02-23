@@ -9,12 +9,12 @@
       src="https://kit.fontawesome.com/683b4b40e3.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../Public/css/products.css" />
-    <link rel="stylesheet" href="../Public//css/header.css" />
-    <link rel="stylesheet" href="../Public/css/bottomFooter.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/bottomFooter.css" />
   </head>
   <body>
-    <div class="header"></div>
+    <%- include("partials/header.ejs") %>
     <div id="main">
       <div id="categories">
         <div id="sizeChart">
@@ -93,20 +93,9 @@
         <div id="products"></div>
       </div>
     </div>
-    <div class="footer"></div>
+    <!-- footer component  -->
+    <%- include("partials/bottomFooter.ejs") %>
   </body>
 </html>
-<script type="module">
-  import navbar from "../components/header.js";
-  import bottomFooter from "../components/bottomFooter.js";
 
-  let header1 = document.querySelector(".header");
-
-  header1.innerHTML = navbar();
-
-  let footer1 = document.querySelector(".footer");
-
-  footer1.innerHTML = bottomFooter();
-</script>
-
-<script src="../Public/scripts/products.js"></script>
+<script src="scripts/products.js"></script>

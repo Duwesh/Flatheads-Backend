@@ -3,7 +3,7 @@ require("dotenv").config()
 
 const connect = () => {
   mongoose.connect(
-    `mongodb+srv://jeevan:${process.env.Mongo_Passcode}@cluster0.2q58b.mongodb.net/${process.env.db}?retryWrites=true&w=majority`
+    `mongodb+srv://jeevan:jeevan_243@cluster0.2q58b.mongodb.net/flatheads_products?retryWrites=true&w=majority`
   );
 };
 
