@@ -8,6 +8,16 @@ router.get("",async(req,res)=>{
 
    
     // console.log(user)
+        return res.render("login.ejs"); 
+    
+  
+   
+})
+router.get("",async(req,res)=>{
+
+
+   
+    // console.log(user)
         return res.render("register.ejs"); 
     
   
