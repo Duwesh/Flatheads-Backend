@@ -168,6 +168,7 @@ var arr = [
   },
 ];
 
+
 let products1 = document.getElementById("products");
 
 async function callProudcts() {

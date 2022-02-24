@@ -22,8 +22,6 @@ app.get("/Productpage", (req, res) => {
   return res.render("Productpage.ejs");
 });
 
-
-
 app.listen(Port1, async (req, res) => {
   try {
     await connect();
