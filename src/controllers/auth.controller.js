@@ -8,20 +8,42 @@ var newToken = (user)=>{
 }
 const register = async (req,res) =>{
     try{
+console.log(req.body.email)
         let user = await User.findOne({email:req.body.email}).lean().exec();
         if(user)
         return res.send("User already exists");
-      console.log("kriti")
+    //   console.log("kriti")
       const Token = newToken(user);
           user = await User.create(req.body);
+// console.log(user)
          
-         ;
-          return res.render("users/login.ejs", {Token:Token});
+          return res.render("login.ejs",{user});
         }
         //  return res.render();
         catch(err){
        return res.send(err.message);
     }
 }
-
-module.exports = register;
+const signin =async (req,res) =>{
+    try{
+        // console.log(req.body);
+        console.log(req.body.email)
+        const user = await User.findOne({email:req.body.email});
+        
+        if(!user)
+        {
+            return res.send({message:"Either email or password is incorrect"});
+        }
+        const match = user.checkPassword(req.body.password);
+        if(!match)
+        {
+            return res.send({message:"Either email or password is incorrect"});
+        }
+        const Token = newToken(user);
+        res.render("homepage.ejs",{Token});
+    }
+    catch(err){
+        res.send({msg:err.message});
+    }
+}
+module.exports = {register,signin};

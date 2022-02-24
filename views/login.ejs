@@ -5,27 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-in</title>
-    <% for(token of token) { %>
-        <p><%= token %></p>
-        <$= } %>
-    <!-- <link rel="stylesheet" href="./styles/login.css">
-   <link rel="stylesheet" href="../styles/header.css">
+  
+    <link rel="stylesheet" href="/css/login.css">
+   <!-- <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/bottomFooter.css">
     <script
       src="https://kit.fontawesome.com/683b4b40e3.js"
       crossorigin="anonymous"
-    ></script> -->
+    ></script> --> 
    
 
 
 </head>
 <body>
-    <h1>Login</h1>
-    <!-- <div class="header"></div>
+    
+    <div class="header"></div>
       
         <div class="contain">
             <h1>LOGIN</h1>
-             <form onsubmit="login(event)" id="my_form" >
+             <form id="my_form" action="http://localhost:4888/landing_page" method="POST"  >
                     <div id="err_alert">
                         <ul id="list">
                            
@@ -34,17 +32,18 @@
                         </ul>
                     </div>
                   <br>
-                <label> USERNAME</label><br>
-                <input id="login_username" type="username" ><br>
+                <label for="email"> EMAIL</label><br>
+                <input id="login_username" type="username" type="text" value="" name="email" ><br>
                 <br>
-                <label>PASSWORD</label><br>
-                <input id="login_password" type="password" ><br>
+                <label for="password">PASSWORD</label><br>
+                <input id="login_password" type="password" type="text" value="" name="password" ><br>
                 <br>
                 
-                <button id="create" type="submit" >SIGN IN</button>
-                <p id="para" onclick="link()">Create account</p>
+                <input id="create" type="submit" value="SUBMIT" name="submit" />
+                <br>
+                <a href="http://localhost:4888/auth/google"><h4>Continue with google</h4></a>
         
-    </form> -->
+    </form>
     </div>
   
    <div class="footer"></div>

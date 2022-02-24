@@ -13,8 +13,8 @@ userSchema.pre("save",function(next) {
     return next();
 
 });
-// userSchema.methods.checkPassword = function (password){
-//     return bcrypt.compareSync(password, this.password);
-// }
+userSchema.methods.checkPassword = function (password){
+    return bcrypt.compareSync(password, this.password);
+}
 let User = mongoose.model("user",userSchema);
 module.exports = User;

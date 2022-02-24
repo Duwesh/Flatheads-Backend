@@ -8,7 +8,7 @@ router.get("",async(req,res)=>{
 
    
     // console.log(user)
-        return res.render("users/register.ejs"); 
+        return res.render("register.ejs"); 
     
   
    
