@@ -22,6 +22,11 @@ app.get("/Productpage", (req, res) => {
   return res.render("Productpage.ejs");
 });
 
+app.get("/cart", (req, res) => {
+  return res.render("cart.ejs");
+});
+
+
 app.listen(Port1, async (req, res) => {
   try {
     await connect();
