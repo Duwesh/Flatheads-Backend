@@ -13,6 +13,25 @@
         display: block;
         margin: 0 auto;
       }
+      .container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2%;
+        /* flex: 1; */
+        /* border: 1px solid black; */
+        gap: 5%;
+      }
+      .img_svg {
+        width: 50%;
+        /* border: 1px solid blanchedalmond; */
+        padding: 4%;
+      }
+      .img_svg > img {
+        width: 100%;
+      }
+      .user_form {
+        width: 50%;
+      }
     </style>
     <title>💰Paytm Page</title>
   </head>
@@ -22,66 +41,69 @@
       src="https://seeklogo.com/images/P/paytm-logo-EC097E9287-seeklogo.com.png"
       alt="paytm_icon"
     />
-
-    <div class="row my-5">
-      <div class="col-md-4 offset-md-6">
-        <div class="card">
-          <div class="card-body">
-            <form class="" action="/paynow" method="post">
-              <div class="form-group">
-                <label for="">Name: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="name"
-                  value=""
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="">Email: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="email"
-                  value=""
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="">Phone: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="phone"
-                  value=""
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="">Amount: </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="amount"
-                  value=""
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <button class="btn form-control btn-primary">Pay Now</button>
-              </div>
-            </form>
+    <div class="container">
+      <div class="user_form">
+        <!-- row my-5 -->
+        <!-- col-md-4 offset-md-6 -->
+        <div class="">
+          <div class="card">
+            <div class="card-body">
+              <form class="" action="/paynow" method="post">
+                <div class="form-group">
+                  <label for="">Name: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    value=""
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Email: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="email"
+                    value=""
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Phone: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="phone"
+                    value=""
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Amount: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="amount"
+                    value=""
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <button class="btn form-control btn-primary">Pay Now</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="">
-      <img
-        class="col-md-4 offset-md-2 paytm_svg float-left"
-        src="https://www.paytmmoney.com/static/images/global-landing-page/invest-options/nps.svg"
-        alt=""
-      />
+      <div class="img_svg">
+        <img
+          class="paytm_svg"
+          src="https://www.paytmmoney.com/static/images/global-landing-page/invest-options/nps.svg"
+          alt=""
+        />
+      </div>
     </div>
   </body>
 </html>
